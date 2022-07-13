@@ -3,41 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
-      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
-      crossorigin="anonymous"
-    />
+    <title>Quiz Challenge</title>
+    <link rel="stylesheet" href="end.css" />
   </head>
   <body>
     <div class="container">
       <div id="end" class="flex-center flex-column">
-        <h1 id="finalScore">0</h1>
+        <h1 id="finalScore">Save your results</h1>
         <form class="end-form-container">
-          <h2 id="end-text">Enter your name below to save your score!</h2>
           <input
             type="text"
             name="name"
             id="username"
-            placeholder="Enter your name"
+            placeholder="Enter your initials"
           />
-          <button
-            class="btn"
-            id="saveScoreBtn"
-            type="submit"
-            onclick="saveHighScore(event)"
-            disabled
-          >
-            Save
-          </button>
+          <button class="btn" id="saveScoreBtn" type="submit">Save</button>
         </form>
-        <a href="/game.html" class="btn">Play Again</a>
-        <a href="/" class="btn">Go Home<i class="fas fa-home"></i></a>
+        <a href="quiz.html" class="btn">Play Again</a>
+        <a href="./index.html" class="btn">Go Home</a>
+        <a href="highscore.html" id="viewHighScore" class="btn"
+          >View High Scores</a
+        >
       </div>
     </div>
-    <script src="end.js"></script>
+    <script src="./end.js"></script>
   </body>
 </html>

@@ -1,9 +1,10 @@
+:root {
+  background-color: #0051ba;
+}
+
 #viewHighScore {
   color: #ffc82d;
   font-size: small;
-}
-body {
-  background-color: #0051ba;
 }
 p {
   margin: 0;
@@ -15,7 +16,6 @@ p {
   align-items: center;
   border-top: 1px solid #85898a;
   cursor: pointer;
-  transform: scale(1.03);
   transition: transform 150ms;
 }
 .list {

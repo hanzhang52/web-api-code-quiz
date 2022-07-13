@@ -1,0 +1,38 @@
+body {
+  background-color: #0051ba;
+}
+
+#highScoresList {
+  list-style: none;
+  margin-bottom: 4rem;
+}
+.high-score {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  color: red;
+}
+#finalScore {
+  color: #85898a;
+  padding: 20px;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 640px;
+  border-radius: 5px;
+  background-color: white;
+  transform: translate(-50%, -50%);
+}
+a.btn {
+  background-color: #ffc82d;
+  margin: 0 5px;
+  width: 100px;
+  font-size: large;
+  color: white;
+  height: 35px;
+  border: 1px solid #85898a;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}

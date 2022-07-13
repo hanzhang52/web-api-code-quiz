@@ -1,15 +1,13 @@
 const question = document.querySelector("#question");
 const choices = Array.from(document.querySelectorAll(".choice-text"));
 const scoreText = document.querySelector("#score");
-// const progressText = document.querySelector("#progressText");
-// const progressBarFull = document.querySelector("#progressBarFull");
-
 let currentQuestion = {};
+let timerEl = document.getElementById("timer");
+var timeEl;
 let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
-
 let questions = [
   {
     question:
@@ -47,6 +45,8 @@ let questions = [
   },
 ];
 
+var time = questions.length * 15;
+
 const SCORE_POINTS = 100;
 const MAX_QUESTIONS = 4;
 
@@ -55,18 +55,24 @@ startGame = () => {
   score = 0;
   availableQuestions = [...questions];
   getNewQuestion();
+  timeEl = setInterval(timeInterval, 1000);
+  timerEl.textContent = time;
 };
+
+function timeInterval() {
+  time--;
+  timerEl.textContent = time;
+  if (time <= 0) {
+    alert("End of quiz");
+  }
+}
 
 getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
     localStorage.setItem("mostRecentScore", score);
 
-    return window.location.assign("/end.html");
+    return window.location.assign("end.html");
   }
-
-  // questionCounter++;
-  // progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
-  // progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 
   const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionsIndex];
@@ -82,18 +88,6 @@ getNewQuestion = () => {
   acceptingAnswers = true;
 };
 
-// savescore: function () {
-//   let leaderboard = JSON.parse(localStorage.getItem("leaderbord"))
-
-//   if (!leaderboard)
-//     leaderboard = [];
-//   }
-
-//   leaderboard.push(this.getScore);
-//   localStorage.setItem("leaderboard", JSON.stringify(leaderboard));
-
-// }
-
 choices.forEach((choice) => {
   choice.addEventListener("click", (e) => {
     if (!acceptingAnswers) return;
@@ -107,7 +101,8 @@ choices.forEach((choice) => {
 
     if (classToApply === "correct") {
       incrementScore(SCORE_POINTS);
-    }
+      alert("Correct");
+    } else alert("Incorrect");
 
     selectedChoice.parentElement.classList.add(classToApply);
 

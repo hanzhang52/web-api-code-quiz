@@ -1,14 +1,8 @@
+const highScoresList = document.querySelector("#highScoresList");
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
-body {
-    color: #fff;
-}
-
-#highScoresList {
-    list-style: none;
-    margin-bottom: 4rem;
-}
-
-.high-score {
-    font-size: 2.8rem;
-    margin-bottom: 0.5rem;
-}
+highScoresList.innerHTML = highScores
+  .map((score) => {
+    return `<li class="high-score">${score.name} - ${score.score}</li>`;
+  })
+  .join("");
