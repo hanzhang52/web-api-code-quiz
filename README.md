@@ -12,6 +12,10 @@ This assignment was created from scratch using HTML, CSS, and Javascript to use 
 ![Screenshot 4](./assets/readmescreenshot4.png)
 ![Screenshot 5](./assets/readmescreenshot5.png)
 
+## Link to deployed application:
+
+https://hanzhang52.github.io/web-api-code-quiz/
+
 ## License
 
 MIT License
