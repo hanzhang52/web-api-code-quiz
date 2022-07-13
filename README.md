@@ -6,11 +6,11 @@ This assignment was created from scratch using HTML, CSS, and Javascript to use 
 
 ## ScreenShot
 
-![Screenshot 1](./Assets/readmescreenshot1.png)
-![Screenshot 2](./Assets/readmescreenshot2.png)
-![Screenshot 3](./Assets/readmescreenshot3.png)
-![Screenshot 4](./Assets/readmescreenshot4.png)
-![Screenshot 5](./Assets/readmescreenshot5.png)
+![Screenshot 1](./assets/readmescreenshot1.png)
+![Screenshot 2](./assets/readmescreenshot2.png)
+![Screenshot 3](./assets/readmescreenshot3.png)
+![Screenshot 4](./assets/readmescreenshot4.png)
+![Screenshot 5](./assets/readmescreenshot5.png)
 
 ## License
 
